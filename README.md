@@ -234,3 +234,19 @@ Response
     }
 ]
 ```
+### api /regex_replace
+Request
+```json
+{
+    "text" : "This is one sentence. This is a second sentence.",
+    "pattern" : "This is",
+    "to" : "That is"
+}
+```
+
+Response
+```json
+{
+    "value": "That is one sentence. That is a second sentence."
+}
+```
