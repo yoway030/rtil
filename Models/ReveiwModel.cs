@@ -1,12 +1,19 @@
 namespace rtil.Models
 {
-    class ReviewContentsParseRequest
+    public class TeamsMember
     {
-        public string? reviewContents { get; set; }
-        public string? teamsMemberInfo { get; set; }
+        public string? displayName { get; set; }
+        public string? mail { get; set; }
+        public string? id { get; set; }
     }
 
-    class ReviewContentsParseResponse
+    public class ReviewContentsParseRequest
+    {
+        public string? reviewContents { get; set; }
+        public TeamsMember[]? teamsMembers { get; set; }
+    }
+
+    public class ReviewContentsParseResponse
     {
         public string? reviewId { get; set; }
         public string? reviewAuthor { get; set; }
@@ -17,13 +24,13 @@ namespace rtil.Models
         public string[]? teamsMentionId { get; set; }
     }
 
-    class ReviewTeamsMessageIdUpdateRequest
+    public class ReviewTeamsMessageIdUpdateRequest
     {
         public string? reviewId { get; set; }
         public string? teamsMessageId { get; set; }
     }
 
-    class ReviewTeamsMessageIdUpdateResponse
+    public class ReviewTeamsMessageIdUpdateResponse
     {
         public string? value { get; set; }
     }
